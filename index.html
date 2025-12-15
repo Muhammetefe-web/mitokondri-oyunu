@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitokondri Eğitim Platformu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e272e, #485460);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .menu-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #ff9f43;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #d2dae2;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .menu-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+
+        .btn-learn {
+            background: linear-gradient(45deg, #ff9f43, #ee5253);
+            color: white;
+            box-shadow: 0 4px 15px rgba(238, 82, 83, 0.4);
+        }
+
+        .btn-quiz {
+            background: linear-gradient(45deg, #0fb9b1, #2bcbba);
+            color: white;
+            box-shadow: 0 4px 15px rgba(43, 203, 186, 0.4);
+        }
+
+        .menu-btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #808e9b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1>Mitokondriyi Keşfet</h1>
+        <p>Hücrenin enerji santralini öğrenmeye hazır mısın?</p>
+
+        <a href="info.html" class="menu-btn btn-learn">
+            📖 Konu Anlatımı & Atlas
+        </a>
+
+        <a href="questions.html" class="menu-btn btn-quiz">
+            ❓ Bilgini Test Et (Oyun)
+        </a>
+
+        <div class="footer">
+            Yapımcılar: Mustafa Efe Can & Muhammet Efe Sal
+        </div>
+    </div>
+
+</body>
+</html>
