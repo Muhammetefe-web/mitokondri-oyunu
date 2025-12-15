@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mitokondri Oyunu</title>
 
 <style>
@@ -13,10 +14,28 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+    margin: 0;
 }
+/* GERİ DÖN BUTONU */
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: white;
+    background: rgba(0,0,0,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.back-home:hover { background: rgba(0,0,0,0.4); }
+
 .box{
     background:#fff;
     width:760px;
+    max-width: 95%;
     padding:25px;
     border-radius:16px;
     box-shadow:0 15px 30px rgba(0,0,0,.25);
@@ -31,8 +50,8 @@ body{
     background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.4),transparent 70%);
     animation:shine 6s infinite;
 }
-h1,h2{color:#333}
-p{font-size:17px;line-height:1.6}
+h1,h2{color:#333; text-align: center;}
+p{font-size:17px;line-height:1.6; text-align: center;}
 
 button{
     padding:12px 22px;
@@ -43,8 +62,10 @@ button{
     background:linear-gradient(45deg,#4CAF50,#2e8b57);
     color:#fff;
     transition:.3s;
+    width: 100%; /* Mobilde butonlar tam genişlik */
+    margin-top: 10px;
 }
-button:hover{transform:scale(1.05)}
+button:hover{transform:scale(1.02)}
 
 .option{
     display:block;
@@ -59,6 +80,7 @@ button:hover{transform:scale(1.05)}
     display:flex;
     justify-content:space-between;
     font-weight:bold;
+    margin-bottom: 10px;
 }
 #progress{
     height:10px;
@@ -73,7 +95,7 @@ button:hover{transform:scale(1.05)}
     background:linear-gradient(90deg,#4CAF50,#00c853);
     transition:.5s;
 }
-#feedback{height:25px;font-weight:bold}
+#feedback{height:25px;font-weight:bold; text-align: center; margin-top: 10px;}
 
 /* YAPIMCI */
 #creator{
@@ -107,21 +129,22 @@ button:hover{transform:scale(1.05)}
 
 <body>
 
-<a href="index.html" class="back-home">← Ana Menüye Dön</a>
-    
+<a href="index.html" class="back-home">← Ana Menü</a>
+
 <div class="box">
 
 <!-- ÖĞRENME -->
 <div id="learn">
 <h1>🧠 Mitokondriyi Öğrenelim</h1>
 <p><b>Mitokondri</b>, ATP üreterek hücreye enerji sağlar.</p>
-<p>
+<p style="text-align: left; display: inline-block;">
 ⚡ Çift zarlıdır<br>
 ⚡ İç zar kıvrımlarına <b>krista</b> denir<br>
 ⚡ İç kısmına <b>matrix</b> denir<br>
 ⚡ Kendi DNA’sı vardır<br>
 ⚡ Oksijenli solunum yapar
 </p>
+<br>
 <button onclick="startGame()">Oyuna Başla ▶</button>
 </div>
 
@@ -154,6 +177,7 @@ Yapımcı: <b>MUSTAFA EFE CAN</b> ve <b>MUHAMMET EFE SAL</b>
 </div>
 
 <button onclick="location.reload()">Tekrar Oyna 🔄</button>
+<button onclick="window.location.href='index.html'" style="background: linear-gradient(45deg, #FF9800, #F57C00); margin-top: 10px;">Ana Menüye Dön</button>
 </div>
 
 </div>
@@ -248,4 +272,3 @@ const finalScore=document.getElementById("finalScore");
 
 </body>
 </html>
-
